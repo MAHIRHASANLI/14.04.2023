@@ -1,0 +1,363 @@
+.hero{
+    width: 100%;
+    height: 440px;
+    margin: 100px 0;
+    background-position: top center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%),url("	https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/bg-masthead.jpg");
+    @include for-phone{
+        
+        height: 440px;
+   }
+    .hero__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    &>h1{
+        font-size: 100px;
+        font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        margin-bottom: -15px;
+       text-align: center;
+       color:$black-color;
+        @include for-phone{
+            font-size: 50px;
+       }
+    }
+    &>h3{
+        text-align: center;
+        color:$black-color;
+        font-size: 25px;
+        font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        @include for-phone{
+            font-size: 20px;
+       }
+    }
+    &>a{
+        text-decoration: none;
+        color: $my-white;
+        padding: 24px 40px;
+        background-color: $btn-bgc;
+        border-radius: 10px;
+        text-decoration: none;
+        font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+        transition: .2s;
+        &:hover{
+          background-color: $btn-hover;
+        }
+    }
+}
+}
+
+
+//Main//
+.main{
+    width: 100%;
+    height: 440px;
+
+    @include for-phone{
+        
+        height: 440px;
+   }
+    opacity: 1;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+.main__item{
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    &>h2{
+        font-size: 30px;
+        font-family: $fontfamly;
+        margin-bottom: -15px;
+       text-align: center;
+       color:$black-color;
+       @include for-phone{
+        font-size: 20px;
+       }
+    }
+    &>p{
+        text-align: center;
+        color:$black-color;
+        font-size: 19px;
+        font-family:$fontfamly;
+        @include for-phone{
+            font-size: 24px;
+           }
+    }
+    .main__btn{
+        text-decoration: none;
+        color: $my-white;
+        padding: 24px 40px;
+        background-color: $black-color;
+        border-radius: 10px;
+        text-decoration: none;
+        font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        transition: .2s;
+        margin: 0 auto;
+        
+        &:hover{
+          background-color: $black-color-opasity;
+        }
+    }
+}
+}
+
+//section//
+section{
+    width: 100%;
+    height: 480px;
+   background-color:$btn-bgc;
+   @include for-phone{
+    width: 100%;
+    height: 100%;
+   }
+   
+   .section__item{
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+    //   padding-top: 40px;
+
+    .section__logo{
+        text-align: center;
+        & h3{
+            color:$my-yellow;
+            font-family:  'Montserrat', sans-serif;
+            font-size: 17px;
+            margin-bottom: -45px;
+        }
+        & h2{
+            color: $my-white;
+            font-size: 50px;
+            font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        }
+       }
+       .section__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr  ;
+        gap: 15px;
+       
+        .grid-item{
+            .fa-solid{
+                font-size: 30px;
+                color: $btn-bgc;
+                padding: 40px 40px;
+                background-color: $my-white;
+                border-radius: 50%;
+               
+            }
+            h4>strong{
+                color:$my-white;
+                box-sizing: border-box;
+                line-height: 1.2;
+                font-family:$fontfamly;
+                font-size: 25px;
+                margin-top: -10px;
+            }
+            p{
+                margin-top: -10px;
+                margin-bottom: 0;
+                color: $white;
+                font-size: 17px;
+            }
+        }
+        .grid__item1{
+            text-align: center;
+            grid-column: 1/2;
+            grid-row: 1/5;
+            @include for-tablet {
+                text-align: center;
+                grid-column: 1/3;
+                grid-row: 1/3;
+            }
+            @include for-phone{
+                text-align: center;
+                grid-column: 1/5;
+                grid-row: 1/2;
+            }
+        }
+        .grid__item2{
+            text-align: center;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            @include for-tablet {
+            text-align: center;
+            grid-column: 3/5;
+            grid-row: 1/3;
+            }
+            @include for-phone{
+                text-align: center;
+                grid-column: 1/5;
+                grid-row: 2/3;
+            }
+        }
+
+        .grid__item3{
+            text-align: center;
+            grid-column: 3/4;
+            grid-row: 1/2;
+            @include for-tablet {
+                text-align: center;
+                grid-column: 1/3;
+                grid-row: 3/5;
+            }
+            @include for-phone{
+                text-align: center;
+                grid-column: 1/5;
+                grid-row: 3/4;
+            }
+        }
+
+        .grid__item4{
+            text-align: center;
+            grid-column: 4/5;
+            grid-row: 1/2;
+            @include for-tablet {
+                text-align: center;
+                grid-column: 3/5;
+                grid-row: 3/5;
+            }
+            @include for-phone{
+                text-align: center;
+                grid-column: 1/5;
+                grid-row: 4/5;
+            }
+        }
+       }
+   }
+   
+}
+
+//Main//
+main{
+    // $team-color
+    width: 100%;
+    height: 600px;
+   background-color: burlywood;
+   margin-top: -50px;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   @include for-tablet{
+    width: 100%;
+    height: 100%;
+   }
+   @include for-tablet{
+    width: 100%;
+    height: 100%;
+   }
+   .main__logo{
+    text-align: center;
+    
+        h3{
+            color:$black-color;
+            font-family:  'Montserrat', sans-serif;
+            font-size: 40px;
+            margin-bottom: -10px;
+          }
+          h2{
+          font-family:$fontfamly;
+          font-size: 16px;
+          font-weight: 400;
+          font-style: italic;
+          }
+   }
+   .main__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr   ;
+    gap: 15px;
+    &>div:last-child>p{
+        color: aqua;
+        width: 100%;
+        
+    }
+    .main-item{
+      
+        margin-top: 55px;
+       
+          .main_img{
+           
+            // @extend%my-display-center;
+            width: 224px;
+            height: 224px;
+            margin-right: auto;
+            margin-left: auto;
+            border: 6px solid $border-color;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                
+            }
+          }
+    }
+    .main__grid-item1{
+
+        text-align: center;
+        grid-column: 1/2;
+        grid-row: 1/4;
+        @include for-tablet {
+            text-align: center;
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+        
+    }
+    .main__grid-item2{
+        text-align: center;
+        grid-column: 2/3;
+        grid-row: 1/4;
+        @include for-tablet {
+        text-align: center;
+        grid-column: 1/4;
+        grid-row: 2/3;
+        }
+       
+    }
+
+    .main__grid-item3{
+        text-align: center;
+        grid-column: 3/4;
+        grid-row: 1/4;
+        @include for-tablet {
+            text-align: center;
+            grid-column: 1/4;
+            grid-row: 3/4;
+        }
+       
+    }
+   
+   }
+}
+main{
+    .main__item{
+        .last-p{
+    color: $white;
+    font-size: 18px;
+    padding: 30px 170px;
+    margin-bottom: 30px;
+        }
+    }
+}
+footer{
+    text-align: center;
+    padding:50px 30px ;
+    background-color: $border-color;
+    @extend%my-display-center;
+    width: 100%;
+    .footer__main{
+        width: 80%;
+        margin: 0 auto;
+        font-size: 30px;
+    }
+}

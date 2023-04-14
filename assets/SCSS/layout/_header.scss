@@ -1,0 +1,60 @@
+header{
+    width: 100%;
+    height: 100px;
+    margin: 0 0;
+    position: fixed;
+    top: 0;
+    background-color:$black-color;
+    .header__item{
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+       @extend %my-display;
+       .header__item--left{
+        &>p{
+            color:$my-yellow;
+            font-family:'Satisfy', cursive, "Montserrat", -apple-system, BlinkMacSystemFont,;
+            font-weight: 700;
+            letter-spacing: 0.0625em;
+            font-size: 30px;
+        }
+       }
+       .header__item--right{
+        @extend %my-display;
+        .icona{
+            color: $my-white;
+            font-size: 30px;
+            @include for-tablet-icon{
+                display: none;
+            }
+        }
+        ul{
+            @include for-tablet{
+                display: none
+            }
+            @extend %my-display;
+            gap: 10px;
+            li{
+                list-style: none;
+               
+                a{
+                    text-decoration: none;
+                    color:$my-white;
+                    font-family: "Montserrat", -apple-system, BlinkMacSystemFont,;
+                    font-size: 0.95rem;
+                    color:$my-white;
+                    letter-spacing: 0.0625em;
+                    box-sizing: border-box;
+                    text-transform: uppercase ;
+                    transition: .3s;
+                    &:hover{
+                        color:$my-yellow ;
+                    }
+                }
+            }
+                
+        }
+        
+       }
+    }
+}
